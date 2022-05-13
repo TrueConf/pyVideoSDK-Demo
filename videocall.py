@@ -17,6 +17,18 @@ methods = Methods(sdk)
 def on_state_change(response):
     print(f'    @@@ {response["appState"]}')
 
+@sdk.handler(EVENT[C.EV_rejectReceived])
+def on_reject(response):
+    print('Reject received')
+    print(f'    Cause: {response["cause"]}')
+    print(f'           {C.CAUSE[response["cause"]]}')
+
+'''
+@sdk.handler({})
+def on_all(response):
+    print(f'    @@@ {response}')
+'''
+
 if __name__ == '__main__':
     methods.call("echotest@trueconf.com")
     sdk.run()

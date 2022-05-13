@@ -23,7 +23,7 @@ def on_state_change(response):
 
 @sdk.handler(EVENT[C.EV_incomingChatMessage])
 def on_chat_massage(response):
-    print('Incoming chat message:')
+    print('Incoming chat message')
     print(f'    From   : {response["peerId"]}')
     print(f'    Message: {response["message"]}')
 
