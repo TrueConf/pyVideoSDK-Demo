@@ -17,6 +17,15 @@ methods = Methods(sdk)
 def on_state_change(response):
     print(f'    @@@ {response["appState"]}')
 
+@sdk.handler(EVENT[C.EV_inviteReceived])
+def on_invite(response):
+    print('Incoming chat message:')
+    print(f'             Type: {response["type"]}')
+    print(f'             From: {response["peerId"]}')
+    print(f'             Name: {response["peerDn"]}')
+    print(f'    Conference ID: {response["confId"]}')
+    # Accept all
+    methods.accept    
+
 if __name__ == '__main__':
-    methods.call("echotest@trueconf.com")
     sdk.run()
