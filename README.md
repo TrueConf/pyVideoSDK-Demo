@@ -29,3 +29,6 @@ And voila:
 1. Click on the link on the TrueConf Room main screen.
 
 2. Log in to any TrueConf Server or to [TrueConf Online](https://trueconf.com/) service.
+
+# So now you can control the running app!
+
