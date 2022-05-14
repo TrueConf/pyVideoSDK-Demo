@@ -1,9 +1,11 @@
 ﻿'''
 @author: Andrey Zobov
 
-Example: get the list of hardware.
+Example: 
+    1. Get a list of the hardware.
+    2. Close the session.
 '''
-
+from pprint import pprint
 import pyVideoSDK
 from pyVideoSDK.methods import Methods
 from pyVideoSDK.consts import EVENT, METHOD
@@ -23,8 +25,10 @@ def on_get_hardware(response):
     print('==============================================')
     print('Hadrware list:')
     print('==============================================')
-    print(f'{response}')
+    pprint(response)
     print('==============================================')
+    # Close the session
+    sdk.close_session()
 
 '''
 @sdk.handler({})
