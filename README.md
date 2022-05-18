@@ -11,7 +11,19 @@ pip install -r requirements.txt
 
 ## How to install TrueConf Room
 
-* [Download TrueConf Room](https://github.com/zoboff/tcroom/blob/master/install_trueconf_room.md)
+Download TrueConf Room for your OS:
+
+* [Windows](https://trueconf.com/download/room/trueconf_room_setup.exe)
+
+* [Debian 10](https://trueconf.com/download/room/linux/trueconf_room_debian10_amd64.deb)
+
+* [Debian 11](https://trueconf.com/download/room/linux/trueconf_room_debian11_amd64.deb)
+
+* [Ubuntu 20.04](https://trueconf.com/download/room/linux/trueconf_room_ubuntu2004_amd64.deb)
+
+* [Ubuntu 21.10](https://trueconf.com/download/room/linux/trueconf_room_ubuntu2110_amd64.deb)
+
+* [Ubuntu 21.10 for Raspberry Pi](https://trueconf.com/download/room/linux/trueconf_room_ubuntu2110_arm64.deb)
 
 ## Before: Launch the *TrueConf Room* application with *-pin* parameter.
 
