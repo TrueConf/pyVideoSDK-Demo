@@ -19,13 +19,13 @@ def on_state_change(response):
 
 @sdk.handler(EVENT[C.EV_inviteReceived])
 def on_invite(response):
-    print('Incoming chat message:')
+    print('Incoming call:')
     print(f'             Type: {response["type"]}')
     print(f'             From: {response["peerId"]}')
     print(f'             Name: {response["peerDn"]}')
     print(f'    Conference ID: {response["confId"]}')
     # Accept all
-    methods.accept    
+    methods.accept()
 
 if __name__ == '__main__':
     sdk.run()
