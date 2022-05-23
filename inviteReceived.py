@@ -1,6 +1,10 @@
 # coding=utf8
 '''''
 @author: zobov
+
+Example: 
+    Processing of the invite received.
+
 '''
 
 import pyVideoSDK
@@ -23,9 +27,15 @@ def on_invite(response):
     print(f'             Type: {response["type"]}')
     print(f'             From: {response["peerId"]}')
     print(f'             Name: {response["peerDn"]}')
-    print(f'    Conference ID: {response["confId"]}')
-    # Accept all
-    methods.accept()
+    print(f'    Conference ID: {response["confId"]}\n')
+    # Ask
+    if input("Accept incoming? (y/n): ").lower() == "y":
+        # Accept
+        methods.accept()
+        print("Call accepted.")
+    else:
+        methods.reject()
+        print("Call rejected.")
 
 if __name__ == '__main__':
     sdk.run()
