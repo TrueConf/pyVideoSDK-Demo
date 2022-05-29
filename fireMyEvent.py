@@ -1,23 +1,21 @@
-# coding=utf8
-'''
-@author: Andrey Zobov
+'''''
+@author: zobov
 
 Example: 
-  1. Connect to TrueConf Server.
-  2. Authorize on the server.
+    Fire a custom event through VideoSDK or Room
+
+API Version: 4.1.0+
+
 '''
 
+import config
 import pyVideoSDK
 from pyVideoSDK.methods import Methods
 from pyVideoSDK.consts import EVENT, METHOD_RESPONSE
 import pyVideoSDK.consts as C
-import config
+from pprint import pprint
 
 print(__doc__)
-
-TRUECONF_SERVER = "<Server IP>"
-TRUECONF_ID = "<trueconf_id>"
-PASSWORD = "<password>"
 
 sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = config.DEBUG)
 methods = Methods(sdk)
@@ -26,17 +24,17 @@ methods = Methods(sdk)
 @sdk.handler(METHOD_RESPONSE[C.M_getAppState])
 def on_state_change(response):
     print(f'    Application state is {response["appState"]}')
-    # Need to login
-    if response["appState"] == 2:
-        methods.login(TRUECONF_ID, PASSWORD)
 
-'''
-@sdk.handler({})
-def on_all(response):
-    print(f'    @@@ {response}')
-'''
+@sdk.handler(METHOD_RESPONSE[C.M_fireMyEvent])
+def on_fire_my_event_result(response):
+    print("    Method call result:")
+    pprint(response)
+
+@sdk.handler(EVENT[C.EV_myEvent])
+def on_my_event(response):
+    print("    Event:")
+    pprint(response)
 
 if __name__ == '__main__':
-    # Try to connect to TrueConf Server
-    methods.connectToServer(TRUECONF_SERVER)
+    methods.fireMyEvent("hello_world_event")
     sdk.run()

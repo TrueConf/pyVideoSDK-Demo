@@ -5,15 +5,15 @@
 
 import pyVideoSDK
 from pyVideoSDK.methods import Methods
-from pyVideoSDK.consts import EVENT, METHOD
+from pyVideoSDK.consts import EVENT, METHOD_RESPONSE
 import pyVideoSDK.consts as C
 import config
 
-sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = False)
+sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = config.DEBUG)
 methods = Methods(sdk)
 
 @sdk.handler(EVENT[C.EV_appStateChanged])
-@sdk.handler(METHOD[C.M_getAppState])
+@sdk.handler(METHOD_RESPONSE[C.M_getAppState])
 def on_state_change(response):
     print(f'    @@@ {response["appState"]}')
 
