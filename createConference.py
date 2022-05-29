@@ -9,7 +9,7 @@ Example:
 
 import pyVideoSDK
 from pyVideoSDK.methods import Methods
-from pyVideoSDK.consts import EVENT, METHOD
+from pyVideoSDK.consts import EVENT, METHOD_RESPONSE
 import pyVideoSDK.consts as C
 import config
 
@@ -19,12 +19,13 @@ TRUECONF_SERVER = "<Server IP>"
 TRUECONF_ID = "<trueconf_id>"
 PASSWORD = "<password>"
 
-sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = False)
+sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = config.DEBUG)
 methods = Methods(sdk)
 
 @sdk.handler(EVENT[C.EV_appStateChanged])
-@sdk.handler(METHOD[C.M_getAppState])
+@sdk.handler(METHOD_RESPONSE[C.M_getAppState])
 def on_state_change(response):
+    print(f'    Application state is {response["appState"]}')
     # Need to login
     if response["appState"] == 2:
         methods.login(TRUECONF_ID, PASSWORD)
