@@ -1,50 +1,57 @@
 # pyVideoSDK-Demo
 Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
-Tested on Python 3.8.6.
+## How to use
 
-## Install the required modules
+### Download and install TrueConf Room
+
+   1. [Download TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
+   1. Install with default settigs (Port = 80)
+   1. Launch application c **-pin** parameter in the command line. Example:
+   ```
+   "C:\Program Files\TrueConf\Room\TrueConfRoom.exe" -pin "pin123"
+   ```
+
+### Login
+
+   1. Get your free accounts in https://t.me/TrueConfSDKPromoBot
+   1. Click at the link on the application main screen and open the **web-manager**
+   1. Connect to the server and login in
+
+**Now the application is ready to use**   
+
+## Preparing the python environment
+
+### Install the required modules
 
 ```
 pip install -r requirements.txt
 ```
 
-## How to install TrueConf Room
+### Fix the config.py file if need it
 
-[Download TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
+🚩 If you run the application and a python script on the same computer then to fix the _"config.py"_ is not required.
 
-## Before: Launch the *TrueConf Room* application with *-pin* parameter.
-
-Windows:
-```
-"C:\Program Files\TrueConf\Room\TrueConfRoom.exe" -pin "123"
-```
-
-Linux:
-```
-$ trueconf-room -pin "123"
+```python
+IP = "127.0.0.1"
+PORT = 80
+PIN = "pin123"
+DEBUG = False
 ```
 
-## Launch the **TrueConf Room** ver. 4.0 or later.
+## Run "connect-to-server-and-login.py"
 
-With a command line like this:
+Modify lines below in _"connect-to-server-and-login.py"_ by your data that received from the https://t.me/TrueConfSDKPromoBot:
 
-Windows:
+```python
+...
+TRUECONF_SERVER = "<Server IP>"
+TRUECONF_ID = "<trueconf_id>"
+PASSWORD = "<password>"
+...
 ```
-"C:\Program Files\TrueConf\Room\TrueConfRoom.exe" -pin "123"
-```
+After running the script, you will see something like this:
 
-Linux:
-```
-$ trueconf-room -pin "123"
-```
+![connect-to-server-and-login-console](https://user-images.githubusercontent.com/33928051/171176897-5401a223-66af-4558-a151-15a46bddf189.png)
 
-And voila:
-![screanroom](https://user-images.githubusercontent.com/33928051/159033567-a6bd5542-51c4-4e52-8b50-4aa4c93837c4.png)
-
-1. Click on the link on the TrueConf Room main screen.
-
-2. Log in to any TrueConf Server or to [TrueConf Online](https://trueconf.com/) service.
-
-# So now you can control the running app!
 

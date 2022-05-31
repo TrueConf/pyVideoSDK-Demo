@@ -4,7 +4,7 @@
 
 Example: 
   1. Connect to TrueConf Server.
-  2. Authorize on the server.
+  2. Log in user.
 '''
 
 import pyVideoSDK
@@ -23,11 +23,10 @@ sdk = pyVideoSDK.open_session(ip = config.IP, port = config.PORT, pin = config.P
 methods = Methods(sdk)
 
 @sdk.handler(EVENT[C.EV_appStateChanged])
-@sdk.handler(METHOD_RESPONSE[C.M_getAppState])
 def on_state_change(response):
     print(f'    Application state is {response["appState"]}')
     # Need to login
-    if response["appState"] == 2:
+    if (response["appState"] == 2):
         methods.login(TRUECONF_ID, PASSWORD)
 
 '''
