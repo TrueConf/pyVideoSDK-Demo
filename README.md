@@ -22,15 +22,27 @@ Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
 ## Preparing the python environment
 
+### Clone the repository including submodules
+
+```
+git clone --recurse-submodules https://github.com/TrueConf/pyVideoSDK-Demo.git
+```
+
 ### Install the required modules
 
 ```
+# Change the current directory
+cd pyVideoSDK-Demo
+```
+
+```
+# Install the required modules
 pip install -r requirements.txt
 ```
 
 ### Fix the config.py file if need it
 
-🚩 If you run the application and a python script on the same computer then to fix the _"config.py"_ is not required.
+💡 If you run the application and a python script on the same computer then to fix the _"config.py"_ is not required.
 
 ```python
 IP = "127.0.0.1"
@@ -43,6 +55,7 @@ DEBUG = False
 
 Modify lines below in _"connect-to-server-and-login.py"_ by your data that received from the https://t.me/TrueConfSDKPromoBot:
 
+
 ```python
 ...
 TRUECONF_SERVER = "<Server IP>"
@@ -50,7 +63,12 @@ TRUECONF_ID = "<trueconf_id>"
 PASSWORD = "<password>"
 ...
 ```
-After running the script, you will see something like this:
+
+💡 How can I find of my data for connection and authorization?
+
+![get-free-accounts-bot](https://user-images.githubusercontent.com/33928051/171378668-096026ee-356c-477e-95f4-2cac2fcf9679.png)
+
+### After running the script, you will see something like this:
 
 ![connect-to-server-and-login-console](https://user-images.githubusercontent.com/33928051/171176897-5401a223-66af-4558-a151-15a46bddf189.png)
 
