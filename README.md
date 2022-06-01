@@ -30,12 +30,12 @@ git clone --recurse-submodules https://github.com/TrueConf/pyVideoSDK-Demo.git
 
 ### Install the required modules
 
-```
+```bash
 # Change the current directory
 cd pyVideoSDK-Demo
 ```
 
-```
+```bash
 # Install the required modules
 pip install -r requirements.txt
 ```
