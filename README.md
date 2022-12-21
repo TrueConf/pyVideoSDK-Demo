@@ -3,7 +3,7 @@ Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
 ## How to use
 
-### Download and install TrueConf Room
+### Download and install TrueConf VideoSDK or TrueConf Room
 
    1. [Download TrueConf VideoSDK or TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
    1. Install with default settigs (Port = 80)
