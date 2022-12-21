@@ -5,11 +5,11 @@ Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
 ### Download and install TrueConf Room
 
-   1. [Download TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
+   1. [Download TrueConf VideoSDK or TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
    1. Install with default settigs (Port = 80)
-   1. Launch application c **-pin** parameter in the command line. Example:
+   1. Launch application c **-pin** parameter in the command line. Example for TrueConf VideoSDK on Windows:
    ```
-   "C:\Program Files\TrueConf\Room\TrueConfRoom.exe" -pin "pin123"
+   "C:\Program Files\TrueConf\VideoSDK\VideoSDK.exe" -pin "pin123"
    ```
 
 ### Login
@@ -54,7 +54,6 @@ DEBUG = False
 ## Run "connect-to-server-and-login.py"
 
 Modify lines below in _"connect-to-server-and-login.py"_ by your data that received from the https://t.me/TrueConfSDKPromoBot:
-
 
 ```python
 ...
