@@ -15,7 +15,7 @@ Python code examples that use TrueConf VideoSDK API and TrueConf Room API
    ```
    Linux:
    ```
-   $ trueconf-video-sdk -pin "123"
+   $ trueconf-video-sdk -pin "pin123"
    ```
 
 ### Login
