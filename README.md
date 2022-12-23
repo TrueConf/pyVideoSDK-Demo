@@ -7,9 +7,15 @@ Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
    1. [Download TrueConf VideoSDK or TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
    1. Install with default settigs (Port = 80)
-   1. Launch application c **-pin** parameter in the command line. Example for TrueConf VideoSDK on Windows:
+   1. Launch application c **-pin** parameter in the command line.
+   
+   Windows:
    ```
    "C:\Program Files\TrueConf\VideoSDK\VideoSDK.exe" -pin "pin123"
+   ```
+   Linux:
+   ```
+   $ trueconf-video-sdk -pin "123"
    ```
 
 ### Login
