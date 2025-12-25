@@ -1,3 +1,8 @@
+> [!CAUTION]
+> **Deprecated!** This project has been migrated and is now part of the [`python-trueconf-room`](https://github.com/TrueConf/python-trueconf-room) repository.
+
+---
+
 # pyVideoSDK-Demo
 Python code examples that use TrueConf VideoSDK API and TrueConf Room API
 
